@@ -1,0 +1,85 @@
+html {
+    background-color: #036;
+    font-family: Arial;
+}
+
+header {
+    background-color: coral;
+    color: black;
+    margin-bottom: 1em;
+}
+
+hgroup {
+    padding: 0.5em;
+}
+
+nav {
+    background-color: lightcyan;
+    font-size: 1.4em;
+    padding: 0.25em;
+}
+
+body {
+    font-size: 1.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin:0
+}
+
+hgroup h3 {
+    font-size: 1em;
+}
+
+section h2 {
+    border-bottom: 0.1em solid;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font-style: italic;
+    color: gray;
+}
+
+img {
+    border: gray solid;
+}
+
+nav a {
+    margin: 0.25em;
+}
+
+a:link {
+    font-weight: bold;
+    color: gold;
+}
+
+a:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+
+article {
+    background-color: white;
+    padding: 0.5em;
+}
+
+footer {
+    background-color: coral;
+    color: black;
+    margin-top: 1em;
+}
+
+p {
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    
+}

@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+  float: none;
+  cursor: auto;
+  background-color: 0;
+  /* and so on and so forth for any other attribute you want to reset */
+}
