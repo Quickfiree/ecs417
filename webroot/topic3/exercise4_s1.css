@@ -12,6 +12,12 @@ body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
 h1, h2, h3 {
     margin:0
 }
@@ -44,6 +50,11 @@ hgroup h3 {
 
 /* Anything inside articles and sections */
 
+article {
+    background-color: white;
+    padding: 0.5em;
+}
+
 section h2 {
     border-bottom: 0.1em solid;
 }
@@ -59,17 +70,6 @@ figcaption {
 
 img {
     border: gray solid;
-}
-
-article {
-    background-color: white;
-    padding: 0.5em;
-}
-
-p {
-    margin: 0;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
 }
 
 /* Generalised link rules */
