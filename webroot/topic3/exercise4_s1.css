@@ -1,7 +1,22 @@
+/* Generalised rules */
+
 html {
     background-color: beige;
     font-family: Arial;
 }
+
+body {
+    font-size: 1.5em;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin:0
+}
+
+/* All parts of header */
 
 header {
     background-color: rgb(255, 169, 169);
@@ -19,20 +34,15 @@ nav {
     padding: 0.25em;
 }
 
-body {
-    font-size: 1.5em;
-    padding-left: 5em;
-    padding-right: 5em;
-    margin: 0;
-}
-
-h1, h2, h3 {
-    margin:0
+nav a {
+    margin: 0.25em;
 }
 
 hgroup h3 {
     font-size: 1em;
 }
+
+/* Anything inside articles and sections */
 
 section h2 {
     border-bottom: 0.1em solid;
@@ -51,9 +61,18 @@ img {
     border: gray solid;
 }
 
-nav a {
-    margin: 0.25em;
+article {
+    background-color: white;
+    padding: 0.5em;
 }
+
+p {
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+/* Generalised link rules */
 
 a:link {
     font-weight: bold;
@@ -65,21 +84,10 @@ a:hover {
     color: black;
 }
 
-
-article {
-    background-color: white;
-    padding: 0.5em;
-}
+/* Anything inside footer */
 
 footer {
     background-color: rgb(255, 169, 169);
     color: black;
     margin-top: 1em;
-}
-
-p {
-    margin: 0;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    
 }
