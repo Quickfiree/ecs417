@@ -10,6 +10,13 @@ fieldset {
 
 .submit {
     background-color: white;
+    text-align: center;
+}
+
+.button {
+    background: green;
+    color: white;
+    border-radius: 0.25em;
 }
 
 legend {
