@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+}
+
+table {
+    border: 1px solid;
+    padding: 0.5em;
+}
+td {
+    text-align: center;
+    border: 1px solid gray;
+    font-size: 1.5em;
+}
+
+th {
+    border: 1px solid gray;
+    background-color: lightgray;
+    font-size: 1.5em;
+}
+
+.movies {
+    background-color: darkred;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0.25em
+}
+
+img {
+    border-radius: 1em;
+}
+
