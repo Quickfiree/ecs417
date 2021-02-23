@@ -10,13 +10,17 @@ fieldset {
 
 .submit {
     background-color: white;
-    text-align: center;
-}
+}    
 
 .button {
+    text-align: center
+}
+
+.sub_clear {
     background: green;
     color: white;
     border-radius: 0.25em;
+    text-align: center;
 }
 
 legend {
