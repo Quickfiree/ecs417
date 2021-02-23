@@ -1,4 +1,4 @@
-body, table, td, th, img, caption {
+body, table, td, th, img, caption, form, fieldset, legend {
   margin: 0;
   border: 0;
   padding: 0;
@@ -7,5 +7,6 @@ body, table, td, th, img, caption {
   background-color: 0;
   font-weight: normal;
   color: 0;
-  border-radius: 0em;
+  border-radius: 0;
+  width: auto;
 }

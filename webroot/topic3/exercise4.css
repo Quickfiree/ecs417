@@ -1,0 +1,23 @@
+form {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+fieldset {
+    background-color: lightgreen;
+    margin: 0;
+}
+
+.submit {
+    background-color: white;
+}
+
+legend {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
