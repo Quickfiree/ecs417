@@ -9,18 +9,4 @@ body, a, p, ul, li, div, aside, figure, hr, h4 {
     padding: auto;
     font-weight: normal;
     line-height: normal;
-    
-
-
-
-
-}
-
-body, div, h4, p, pre, a, ul, li, aside, figure, nav {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
