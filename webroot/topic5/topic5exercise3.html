@@ -12,15 +12,28 @@
         </title>
     </head>
     <body>
-        <nav class = "navbar navbar-expand-sm navbar-dark bg-dark">
-                <h3 class = "text-light">Jatinkumar Patel</h3>
-                <a class = "pl-3" href = "#interests">Interests</a>
-                <a class = "pl-3" href = "#education">Education</a>
-                <a class = "pl-3" href = "#skills">Skills</a>
-        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">Jatinkumar Patel</a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#interests">Interests <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         <div class = "row">
             <div class = "col-sm-2">
-                <div class = "bg-light p-3 mb-2 ml-3">
+                <div class = "bg-light p-3 mb-2 ml-3" id = "interests">
                     <p class = "mb-0">
                         <b>Interests</b><br>
                         Programming<br>
@@ -40,7 +53,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class = "bg-light p-3 mb-2 ml-3">
+                <div class = "bg-light p-3 mb-2 ml-3" id = "skills">
                     <h4 class = "bg-warning p-3">
                         Top 3 Skills
                     </h4>
@@ -76,7 +89,7 @@
                     <h2>
                         Education
                     </h2>
-                    <table class = "table">
+                    <table class = "table" id = "education">
                         <tr>
                             <th>
                                 2020-present
@@ -98,7 +111,7 @@
                 </div>
             </div>
             <div class = "col-sm-3">
-                <div class = "bg-light p-3 mb-2 mr-3">
+                <div class = "bg-light p-3 mb-2 mr-3" id = "hobbies">
                     <h4 class = "bg-warning p-3">
                         Hobbies
                     </h4>
@@ -114,7 +127,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class = "bg-light p-3 mb-2 mr-3">
+                <div class = "bg-light p-3 mb-2 mr-3" id = "movies">
                     <h4 class = "bg-warning p-3">
                         Top 5 movies
                     </h4>
