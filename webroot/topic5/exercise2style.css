@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+p, ul {
+    font-size: 1em;
+}
+
+div#internal {
+    display:block;
+    width: 100%;
+    background-color: lightgreen;
+    margin-bottom: 1em;
+}
+
+div#internal ul {
+    margin: 0;
+    padding: 1em;
+}
+
+div#internal ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 1em;
+}
+
+li#name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+div#skills li img {
+    float: left;
+}
+
+div#skills ul {
+    line-height: 7em;
+}
+
+div#left {
+    float: left;
+    position: absolute;
+    display: block;
+    width: 15em;
+}
+
+div#interests {
+    background-color: khaki;
+    color: rgb(102, 99, 58);
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+div#interests h4 {
+    margin: 0;
+}
+
+div#interests ul {
+    margin-bottom: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+div#hobbies, div#movies, div#skills {
+    background-color: lightgrey;
+    padding: 0.75em;
+}
+
+aside {
+    float: right;
+    width: 15em;
+}
+
+aside div {
+    position: absolute;
+    width: 13.5em;
+}
+
+div#movies {
+    margin-top: 10em;
+}
+
+div#external h4, div#skills h4, aside h4 {
+    margin: 0;
+    background-color: lightgreen;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+div#skills ul, aside ul {
+    list-style-type: none;
+    background-color: white;
+    padding: 0;
+}
+
+div#left {
+    float: left;
+    width: 15em;
+    position: absolute;
+    display: block;
+}
+
+div#external {
+    background-color: lightgrey;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+div#external ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div#main {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+div#main ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+div#main h4, div#main p {
+    margin: 0;
+}
+
+figure {
+    float: right;
+    margin: 0;
+}
+
+hr {
+    width: 100%;
+}
