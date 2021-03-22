@@ -1,0 +1,87 @@
+/* Navbar - will be on all pages */
+body {
+    margin: 0;
+    background-color: #CCE6F4;
+}
+
+nav {
+    width: 100%;
+}
+
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.horizontal a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+ul.horizontal a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+ul.horizontal a.active {
+    background-color: #769CA3;
+    color: #011638;
+}
+
+header {
+    padding: 1em;
+    background-color: #6B6D76;
+    color: white;
+}
+
+article {
+    float: left;
+    width: 65%;
+    display: block;
+}
+
+aside {
+    float: right;
+    width: 35%;
+    display: block;
+    background: #CCE6F4;
+    padding-top: 1em;
+}
+
+section {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    background-color: #C5D5F2;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5em;
+    background-color: #011638;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    background-color: #CCE6F4;
+    color: black
+}
