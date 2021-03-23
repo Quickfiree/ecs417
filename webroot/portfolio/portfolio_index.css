@@ -5,7 +5,15 @@ body {
 }
 
 nav {
-    width: 100%;
+    overflow: hidden;
+    background-color: #6B6D76;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.main {
+    margin-top: 2.875em;
 }
 
 ul.horizontal {
@@ -45,14 +53,7 @@ article {
     float: left;
     width: 65%;
     display: block;
-}
-
-aside {
-    float: right;
-    width: 35%;
-    display: block;
-    background: #CCE6F4;
-    padding-top: 1em;
+    margin-bottom: 5em;
 }
 
 section {
@@ -61,9 +62,35 @@ section {
     background-color: #C5D5F2;
 }
 
-figure {
-    padding: 0;
+p {
+    margin-bottom: 0;
+}
+
+ul.modules {
     margin: 0;
+}
+
+section h2 {
+    padding-top: 1em;
+    margin: 0;
+}
+
+aside {
+    float: right;
+    width: 35%;
+    display: block;
+    background: #CCE6F4;
+}
+
+figure {
+    padding: 1em;
+    margin: 0;
+    float: right;
+}
+
+img {
+    border: thin solid;
+    border-radius: 1em;
 }
 
 footer {
@@ -84,4 +111,10 @@ footer a {
 footer a:hover {
     background-color: #CCE6F4;
     color: black
+}
+
+.blog h1 {
+    margin: 0;
+    padding-top: 1em;
+    padding-left: 1em;
 }

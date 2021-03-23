@@ -1,3 +1,15 @@
-html, head, title, body, header, hgroup, nav, article, section, figure, figcaption, footer {
+html, head, title, body, header, hgroup, nav, ul, li, a, a:hover, form, h1, h2,
+h3, h4, div, article, section, figure, p, aside, img, figcaption, footer {
     padding: unset;
+    margin:initial;
+    position:initial;
+    width:initial;
+    float: none;
+    display: block;
+    border:unset;
+    color:initial;
+    background-color: initial;
+    border-radius: initial;
+    height:initial;
+    text-decoration: initial;
 }
