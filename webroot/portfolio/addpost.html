@@ -25,7 +25,7 @@
             </ul>
         </nav>
         <div class = "padding"></div>
-        <form method = "GET">
+        <form method = "GET" id = "addPost">
             <h2>
                 New Blog Post
             </h2>
@@ -44,7 +44,13 @@
                 </div>
                 <div class = "buttons">
                     <input type = "submit" class = "button" value = "Post">
-                    <input type = "reset" class = "button" name = "reset" value = "Clear"> 
+                    <input type = "reset" class = "button" name = "reset" value = "Clear">
+                    <input type = "button" onclick = "clearPost()" value="Reset">
+                    <script>
+                        function clearPost() {
+                            document.getElementById("addPost").reset();
+                        }
+                    </script>
                 </div>
             </fieldset>
         </form>
