@@ -6,9 +6,6 @@
     <link rel = "stylesheet" href = "portfolio_index.css">
     <title> Home - Jatinkumar Patel </title>
 </head>
-<?php
-echo "Hello there."
-?>
 <body> 
     <nav>
         <ul class = "horizontal">
@@ -34,6 +31,9 @@ echo "Hello there."
         <header>
             <hgroup> 
                 <h2>
+                <?php
+                echo "Hello there."
+                ?>
                     Jatinkumar Patel
                 </h2>
                 <h3>
