@@ -1,7 +1,7 @@
 <html>
     <head>
         <title> Add a blog post </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">
         <link rel = "stylesheet" href = "addpost.css">
     </head>
     <body>
@@ -34,21 +34,49 @@
                     <h3>
                         Title
                     </h3>
-                    <input type = "text" class = "title" placeholder = "Enter title" required>
+                    <input type = "text" id = "title" class = "title" placeholder = "Enter title" required>
                 </div>
                 <div>
                     <h3>
                         Body
                     </h3>
-                    <textarea class = "blogBody" placeholder = "Enter text" required></textarea>
+                    <textarea class = "blogBody" id = "body" placeholder = "Enter text" required></textarea>
                 </div>
                 <div class = "buttons">
-                    <input type = "submit" class = "button" value = "Post">
-                    <input type = "reset" class = "button" name = "reset" value = "Clear">
-                    <input type = "button" onclick = "clearPost()" value="Reset">
+                    <input type = "submit" class = "button" id = "submit" value = "Post" onclick = "check()">
+                    <script>
+                        function check() {
+                            if (document.getElementById("title").value == "" && document.getElementById("body").value == "") {
+                                alert("Cannot submit, you have empty boxes!");
+                                document.getElementById("title").style.border = "0.1em solid #FF0000";
+                                document.getElementById("body").style.border = "0.1em solid #FF0000";
+                                event.preventDefault();
+                            } else if (document.getElementById("title").value == "") {
+                                alert("Cannot submit, you have empty boxes!");
+                                document.getElementById("title").style.border = "0.1em solid #FF0000";
+                                event.preventDefault();
+                            } else if (document.getElementById("body").value == "") {
+                                alert("Cannot submit, you have empty boxes!");
+                                document.getElementById("body").style.border = "0.1em solid #FF0000";
+                                event.preventDefault();
+                            }
+
+                            // Reset border colours when they are clicked
+                            document.getElementById("title").addEventListener("click", resetTitle);
+                            document.getElementById("body").addEventListener("click", resetBody);
+                            function resetTitle() {
+                                document.getElementById("title").style.border = null;
+                            }
+                            function resetBody() {
+                                document.getElementById("body").style.border = null;
+                            }
+                        }
+                    </script>
+                    <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
                     <script>
                         function clearPost() {
-                            document.getElementById("addPost").reset();
+                            var r = confirm("Are you sure you want to clear your post?");
+                            if (r == true) document.getElementById("addPost").reset();
                         }
                     </script>
                 </div>
