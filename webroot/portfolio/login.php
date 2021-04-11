@@ -23,7 +23,7 @@
     $res = mysqli_query($conn, $query);
     if (mysqli_num_rows($res) == 1) {
         $_SESSION['user'] = $_POST['user'];
-        header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.html"); 
+        header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php"); 
         exit();
     } else {
         echo "0 results";

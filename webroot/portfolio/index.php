@@ -7,6 +7,9 @@
     <title> Home - Jatinkumar Patel </title>
 </head>
 <body>
+    <?php
+    session_start();
+    ?>
     <script>
         function showLogOut() {
             document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/logout.php">Log Out</a>';
@@ -16,9 +19,6 @@
             document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>';
         }
     </script>
-    <?php
-    session_start();
-    ?>
     <nav>
         <ul class = "horizontal">
             <li>
