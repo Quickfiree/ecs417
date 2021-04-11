@@ -7,11 +7,17 @@
     <title> Home - Jatinkumar Patel </title>
 </head>
 <body>
+    <script>
+        function showLogOut() {
+            document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log Out</a>';
+        }
+    </script>
     <?php
     session_start();
 
     if (isset ($_SESSION['user'])) {
-        // Do if user is logged in
+    // Do if user is logged in
+        //echo "showLogOut();";
         
     } else {
         // Nobody is logged in
@@ -32,7 +38,7 @@
                 <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
             </li>
             <li id = "loginButton">
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>
+                <script> showLogOut(); </script>
             </li>
         </ul>
     </nav>

@@ -5,6 +5,9 @@
         <link rel = "stylesheet" href = "addpost.css">
     </head>
     <body>
+    <?php
+        session_start();
+    ?>
         <nav>
             <ul class = "horizontal">
                 <li>
@@ -25,11 +28,10 @@
             </ul>
         </nav>
         <div class = "padding"></div>
-        <form method = "GET" id = "addPost">
+        <form method = "POST" id = "addPost">
             <h2>
                 New Blog Post
             </h2>
-            <fieldset>
                 <div>
                     <h3>
                         Title
@@ -80,7 +82,6 @@
                         }
                     </script>
                 </div>
-            </fieldset>
         </form>
     </body>
 </html>

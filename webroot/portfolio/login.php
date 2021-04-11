@@ -15,8 +15,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    
-
     // To verify the login
     $email = $_POST["email"];
     $password = $_POST["password"];
@@ -24,7 +22,8 @@
 
     $res = mysqli_query($conn, $query);
     if (mysqli_num_rows($res) == 1) {
-        header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php"); 
+        $_SESSION['user'] = $_POST['user'];
+        header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.html"); 
         exit();
     } else {
         echo "0 results";
