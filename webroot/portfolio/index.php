@@ -18,15 +18,6 @@
     </script>
     <?php
     session_start();
-
-    if (isset ($_SESSION['user'])) {
-    // Do if user is logged in
-        echo '<script type = "text/javascript">showLogOut();</script>';
-        
-    } else {
-        // Nobody is logged in
-        echo '<script type = "text/javascript">showLogIn();</script>';
-    }
     ?>
     <nav>
         <ul class = "horizontal">
@@ -47,6 +38,17 @@
             </li>
         </ul>
     </nav>
+    <?php
+
+    if (isset ($_SESSION['user'])) {
+    // Do if user is logged in
+        echo '<script type = "text/javascript">showLogOut();</script>';
+        
+    } else {
+        // Nobody is logged in
+        echo '<script type = "text/javascript">showLogIn();</script>';
+    }
+    ?>
     <div class = "main">
         
         <header>
