@@ -24,8 +24,8 @@
 
     $res = mysqli_query($conn, $query);
     if (mysqli_num_rows($res) == 1) {
-        $row = $result -> fetch_assoc();
-        echo "Email: ". row["email"] . "- Password: " . $row["password"];
+        
+        echo "Logged in successfully";
     } else {
         echo "0 results";
     }
