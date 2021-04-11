@@ -20,7 +20,7 @@
     <nav>
         <ul class = "horizontal">
             <li>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.html" class = "active">Home</a>
+                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php" class = "active">Home</a>
             </li>
             <li>
                 <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.html">Projects</a>
@@ -32,7 +32,6 @@
                 <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
             </li>
             <li id = "loginButton">
-                
                 <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>
             </li>
         </ul>
