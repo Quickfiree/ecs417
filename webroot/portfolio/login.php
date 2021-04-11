@@ -22,12 +22,11 @@
     $password = $_POST["password"];
     $query = "select * FROM USERS WHERE email = '$email' AND password = '$password'";
 
-    if ($conn -> query($query) === TRUE) {
-        echo "Login Successful";
+    $res = mysqli_query($conn, $query);
+    if (mysqli_num_rows($result) == 1) {
+        $row = $result -> fetch_assoc();
+        echo "Email: ". row["email"] . "- Password: " . $row["password"];
     } else {
-        echo "Error: " . $query . "<br>" . $conn -> error;
+        echo "0 results";
     }
-
-    $conn -> close();
-
 ?>
