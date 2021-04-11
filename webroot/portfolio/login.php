@@ -24,8 +24,8 @@
 
     $res = mysqli_query($conn, $query);
     if (mysqli_num_rows($res) == 1) {
-        
-        echo "Logged in successfully";
+        header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php"); 
+        exit();
     } else {
         echo "0 results";
     }
