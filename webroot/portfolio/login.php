@@ -1,9 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Processing Login... </title>
-    </head>
-    <body>
-        <p> Welcome <?php echo $_POST["email"]; ?>
-    </body>
-</html>
+<?php
+    session_start();
+
+    $dbhost = getenv("MYSQL_SERVICE_HOST");
+    $dbport = getenv("MYSQL_SERVICE_PORT");
+    $dbuser = getenv("DATABASE_USER");
+    $dbpwd = getenv("DATABASE_PASSWORD");
+    $dbname = getenv("DATABASE_NAME");
+
+    // Creates connection to database
+    $conn = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
+
+    // Checks connection
+    if ($conn -> connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    
+
+    // To verify the login
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $query = "select * FROM USERS WHERE email = '$email' AND password = '$password'";
+
+    if ($conn -> query($query) === TRUE) {
+        echo "Login Successful";
+    } else {
+        echo "Error: " . $query . "<br>" . $conn -> error;
+    }
+
+    $conn -> close();
+
+?>

@@ -8,7 +8,14 @@
 </head>
 <body>
     <?php
-    echo "There is php on this page";
+    session_start();
+
+    if (isset ($_SESSION['user'])) {
+        // Do if user is logged in
+        
+    } else {
+        // Nobody is logged in
+    }
     ?>
     <nav>
         <ul class = "horizontal">
@@ -24,7 +31,8 @@
             <li>
                 <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
             </li>
-            <li>
+            <li id = "loginButton">
+                
                 <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>
             </li>
         </ul>
@@ -34,9 +42,6 @@
         <header>
             <hgroup> 
                 <h2>
-                <?php
-                echo "Hello there."
-                ?>
                     Jatinkumar Patel
                 </h2>
                 <h3>
