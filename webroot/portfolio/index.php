@@ -21,11 +21,11 @@
 
     if (isset ($_SESSION['user'])) {
     // Do if user is logged in
-        echo "showLogOut();";
+        echo "<script>showLogOut();</script>";
         
     } else {
         // Nobody is logged in
-        echo "showLogIn();";
+        echo "<script>showLogIn();</script>";
     }
     ?>
     <nav>
