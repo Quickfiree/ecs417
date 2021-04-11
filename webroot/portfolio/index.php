@@ -9,7 +9,11 @@
 <body>
     <script>
         function showLogOut() {
-            document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log Out</a>';
+            document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/logout.php">Log Out</a>';
+        }
+
+        function showLogIn() {
+            document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>';
         }
     </script>
     <?php
@@ -17,10 +21,11 @@
 
     if (isset ($_SESSION['user'])) {
     // Do if user is logged in
-        //echo "showLogOut();";
+        echo "showLogOut();";
         
     } else {
         // Nobody is logged in
+        echo "showLogIn();";
     }
     ?>
     <nav>
@@ -38,7 +43,7 @@
                 <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
             </li>
             <li id = "loginButton">
-                <script> showLogOut(); </script>
+                
             </li>
         </ul>
     </nav>
