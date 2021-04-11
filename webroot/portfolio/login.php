@@ -20,7 +20,7 @@
     // To verify the login
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $query = "select * FROM USERS WHERE email = '$email' AND password = '$password'";
+    $query = "SELECT * FROM USERS WHERE email = '$email' AND password = '$password'";
 
     $res = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) == 1) {
