@@ -99,6 +99,7 @@
                     <input type = "button" class = "button" onclick = "previewPost()" value = "Preview post">
                     <script>
                         function previewPost() {
+                            document.getElementById("preview").style.display = "block";
                             document.getElementById("previewTitle").value = document.getElementById("title");
                             document.getElementById("previewBody").value = document.getElementById("body");
                         }
@@ -115,7 +116,7 @@
                     </script>
                 </div>
         </form>
-        <aside>
+        <aside id = "preview">
             <h1 id = "previewTitle"></h1>
             <p id = "previewBody"></p>
         </aside>
