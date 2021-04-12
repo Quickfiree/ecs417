@@ -77,11 +77,14 @@
 
                 // Sorting by date first
                 function dateSorting($a, $b) {
+                    echo $a[0];
                     echo list($a_month, $a_day, $a_year) = explode('/', $a[0]);
                     echo list($b_month, $b_day, $b_year) = explode('/', $b[0]);
+                    echo strcmp($a_year.$a_month.$a_day.$a[1], $b_year.$b_month.$b_day.$b[1]);
+                    return strcmp($a_year.$a_month.$a_day.$a[1], $b_year.$b_month.$b_day.$b[1]);
                 }
 
-                usort($dateArray, 'dateSorting');
+                usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
 
                 // Sorting by time after sorted by date
 
