@@ -75,21 +75,6 @@
                     $dateArray[$i] = array("date" => $row['postDate'], "time" => $row['postTime'], $row['postTitle'], $row['postBody']);
                 }
 
-                // Sorting by date first
-                function dateSorting($a, $b) {
-                    list($a_month, $a_day, $a_year) = explode('/', $a[0]);
-                    list($b_month, $b_day, $b_year) = explode('/', $b[0]);
-                    return strcmp($b_year.$b_month.$b_day.$b[1], $a_year.$a_month.$a_day.$a[1]);
-                }
-
-                //usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
-
-                // Sorting by time after date
-                function timeSorting($c, $d) {
-                    echo list($c_hour, $c_minute, $c_second) = explode(':', $c[1]);
-                    echo list($d_hour, $d_minute, $d_second) = explode(':', $c[1]);
-                    return strcmp($d_hour.$d_minute.$d_second.$d[1], $c_hour.$c_minute.$c_second.$c[1]);
-                }
 
                 array_multisort( // Sorts according to oldest first
                     array_map('strtotime', array_column($dateArray, 'date')),
@@ -97,12 +82,9 @@
                     $dateArray
                 );
 
-                $dateArray = array_reverse($dateArray);
-
-                //usort($dateArray, 'timeSorting');
+                $dateArray = array_reverse($dateArray); // Reverses the array to make the order newest first.
 
                 for ($i = 0; $i < $rows; $i++) {
-                    $row = $res->fetch_assoc();
                     $title = $dateArray[$i][0];
                     $body = $dateArray[$i][1];
                     echo "<section><h1>$title</h1>";

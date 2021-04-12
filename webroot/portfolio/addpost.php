@@ -96,6 +96,13 @@
                             }
                         }
                     </script>
+                    <input type = "button" class = "button" onclick = "previewPost()" value = "Preview post">
+                    <script>
+                        function previewPost() {
+                            document.getElementById("previewTitle").value = document.getElementById("title");
+                            document.getElementById("previewBody").value = document.getElementById("body");
+                        }
+                    </script>
                     <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
                     <script>
                         function clearPost() {
@@ -108,5 +115,9 @@
                     </script>
                 </div>
         </form>
+        <aside>
+            <h1 id = "previewTitle"></h1>
+            <p id = "previewBody"></p>
+        </aside>
     </body>
 </html>
