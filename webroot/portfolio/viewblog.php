@@ -77,6 +77,7 @@
 
                 // Sorting by date first
                 function dateSorting($a, $b) {
+                    echo $b[0][0];
                     echo strtotime($b[0][0]) - strtotime ($a[0][0]);
                     return strtotime($b[0][0]) - strtotime ($a[0][0]);
                 }
