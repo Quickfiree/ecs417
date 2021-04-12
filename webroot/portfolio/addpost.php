@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (!isset ($_SESSION['user'])) {
-        header("location:http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html'")        
+        header("location:http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html'");
     }
 ?>
 <html>
