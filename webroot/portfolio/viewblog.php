@@ -72,7 +72,7 @@
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $dateArray[$i] = array($row['postDate'], $row['postTime'], $row['postTitle'], $row['postBody']);
+                    $dateArray[$i] = array("date" => $row['postDate'], "time" => $row['postTime'], $row['postTitle'], $row['postBody']);
                 }
 
                 // Sorting by date first
@@ -92,9 +92,9 @@
                 }
 
                 array_multisort(
-                    array_map('strtotime', array_column($dateArray, $dateArray[0][0])),
-                    array_column($dateArray, $dateArray[0][1]),
-                    $dateArray;
+                    array_map('strtotime', array_column($dateArray, 'date')),
+                    array_column($dateArray, 'time'),
+                    $dateArray
                 );
 
                 //usort($dateArray, 'timeSorting');
