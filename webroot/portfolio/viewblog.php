@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "projects.css">
-    <title>Projects</title>
+    <title>Blog Posts</title>
 </head>
 <body>
         <?php
@@ -25,7 +25,7 @@
                     <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php">Home</a>
                 </li>
                 <li>
-                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.php" class = "active">Projects</a>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.php">Projects</a>
                 </li>
                 <li>
                     <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php">Add a blog post</a>
@@ -73,8 +73,8 @@
                     $row = $res->fetch_assoc();
                     $title = $row['postTitle'];
                     $body = $row['postBody'];
-                    echo "<h1>$title</h1>";
-                    echo "<p>$body</p>";
+                    echo "<section><h1>$title</h1>";
+                    echo "<p>$body</p></section>";
                 }
             ?>
         </article>
