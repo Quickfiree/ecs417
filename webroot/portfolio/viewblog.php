@@ -91,23 +91,21 @@
                     return strcmp($d_hour.$d_minute.$d_second.$d[1], $c_hour.$c_minute.$c_second.$c[1]);
                 }
 
-                array_multisort(
+                array_multisort( // Sorts according to oldest first
                     array_map('strtotime', array_column($dateArray, 'date')),
                     array_column($dateArray, 'time'),
                     $dateArray
                 );
 
+                $dateArray = array_reverse($dateArray);
+
                 //usort($dateArray, 'timeSorting');
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $date = $dateArray[$i][0];
-                    $time = $dateArray[$i][1];
-                    $title = $dateArray[$i][2];
-                    $body = $dateArray[$i][3];
+                    $title = $dateArray[$i][0];
+                    $body = $dateArray[$i][1];
                     echo "<section><h1>$title</h1>";
-                    echo "<p> Date of post: $date</p>";
-                    echo "<p> Time of post: $time</p>";
                     echo "<p>$body</p></section>";
                 }
             ?>
