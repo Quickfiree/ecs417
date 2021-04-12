@@ -53,9 +53,6 @@
         <header>
             <hgroup> 
                 <h2>
-                    <?php
-                        echo $_SESSION['user'];
-                    ?>
                     Jatinkumar Patel
                 </h2>
                 <h3>

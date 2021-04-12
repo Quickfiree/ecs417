@@ -7,25 +7,47 @@
     <title>Projects</title>
 </head>
 <body>
-    <nav>
-        <ul class = "horizontal">
-            <li>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php">Home</a>
-            </li>
-            <li>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.html" class = "active">Projects</a>
-            </li>
-            <li>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php">Add a blog post</a>
-            </li>
-            <li>
-                <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
-            </li>
-            <li>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>
-            </li>
-        </ul>
-    </nav>
+        <?php
+            session_start();
+        ?>
+        <script>
+            function showLogOut() {
+                document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/logout.php">Log Out</a>';
+            }
+
+            function showLogIn() {
+                document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>';
+            }
+        </script>
+        <nav>
+            <ul class = "horizontal">
+                <li>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php">Home</a>
+                </li>
+                <li>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.html" class = "active">Projects</a>
+                </li>
+                <li>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php">Add a blog post</a>
+                </li>
+                <li>
+                    <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
+                </li>
+                <li id = "loginButton">
+
+                </li>
+            </ul>
+        </nav>
+        <?php
+            if (isset ($_SESSION['user'])) {
+            // Do if user is logged in
+                echo '<script type = "text/javascript">showLogOut();</script>';
+                
+            } else {
+                // Nobody is logged in
+                echo '<script type = "text/javascript">showLogIn();</script>';
+            }
+        ?>
     <div class = "main">
         <header>
             <h1>My Projects</h1>
