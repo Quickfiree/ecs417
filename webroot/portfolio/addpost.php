@@ -100,8 +100,8 @@
                     <script>
                         function previewPost() {
                             document.getElementById("preview").style.display = "block";
-                            document.getElementById("previewTitle").value = document.getElementById("title");
-                            document.getElementById("previewBody").value = document.getElementById("body");
+                            document.getElementById("previewTitle").value = document.getElementById("title").value;
+                            document.getElementById("previewBody").value = document.getElementById("body").value;
                         }
                     </script>
                     <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
