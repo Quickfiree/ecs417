@@ -16,8 +16,9 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $date = date('Y-m-d H:i:s');
         $sql = "INSERT INTO BLOGPOSTS (postTitle, postBody, postDate)
-        VALUES ('$title', '$body', date('Y-m-d H:i:s'))";
+        VALUES ('$title', '$body', '$date')";
 
         if ($conn -> query($sql) === TRUE) {
             echo "Post added! Redirecting...";
