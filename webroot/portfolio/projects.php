@@ -75,7 +75,7 @@
         </figure>
         <footer>
             <p>
-                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.html">Home</a>
+                <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php">Home</a>
                 |
                 <a href = "https://github.com/Quickfiree/">Github</a>
             </p>
