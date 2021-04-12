@@ -39,7 +39,7 @@
         </ul>
     </nav>
     <?php
-    if (isset ($_SESSION['user'])) {
+    if ($_SESSION['user'] == TRUE) {
     // Do if user is logged in
         echo '<script type = "text/javascript">showLogOut();</script>';
         
