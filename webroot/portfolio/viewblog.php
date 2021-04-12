@@ -81,19 +81,20 @@
                     echo list($a_month, $a_day, $a_year) = explode('/', $a[0]);
                     echo list($b_month, $b_day, $b_year) = explode('/', $b[0]);
                     echo strcmp($a_year.$a_month.$a_day.$a[1], $b_year.$b_month.$b_day.$b[1]);
-                    return strcmp($a_year.$a_month.$a_day.$a[1], $b_year.$b_month.$b_day.$b[1]);
+                    return strcmp($b_year.$b_month.$b_day.$a[1], $a_year.$a_month.$a_day.$b[1]);
                 }
 
                 usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
 
-                // Sorting by time after sorted by date
-
-
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
+                    $date = $dateArray[$i][0];
+                    $time = $dateArray[$i][1];
                     $title = $dateArray[$i][2];
                     $body = $dateArray[$i][3];
                     echo "<section><h1>$title</h1>";
+                    echo "<p> Date of post: $date</p>";
+                    echo "<p> Time of post: $time</p>";
                     echo "<p>$body</p></section>";
                 }
             ?>
