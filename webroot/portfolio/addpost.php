@@ -32,7 +32,6 @@
                     <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
                 </li>
                 <li>
-                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>
                 </li>
             </ul>
         </nav>

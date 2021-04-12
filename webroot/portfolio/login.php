@@ -16,6 +16,7 @@
     }
 
     // To verify the login
+    $user =
     $email = $_POST["email"];
     $password = $_POST["password"];
     $query = "SELECT * FROM USERS WHERE email = '$email' AND password = '$password'";
@@ -24,7 +25,6 @@
     if (mysqli_num_rows($res) == 1) {
         $_SESSION['user'] = $_POST['user'];
         header("Location: http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php"); 
-        exit();
     } else {
         echo "0 results";
     }
