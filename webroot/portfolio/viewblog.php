@@ -74,24 +74,23 @@
                     $row = $res->fetch_assoc();
                     $date = strtotime($row['postDate']);
                     $dateArray[$i] = array($date, $row['postTitle'], $row['postBody']);
-                    echo $dateArray[$i][1];
+                    //echo $dateArray[$i][1];
                 }
 
                 function dateSorting($a, $b) {
-                    return strtotime($b[0]) - strtotime ($a[0]);
+                    return strtotime($b[0][0]) - strtotime ($a[0][0]);
                 }
 
                 usort($dateArray, 'dateSorting');
 
 
-                /*for ($i = 0; $i < $rows; $i++) {
+                for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $title = $row['postTitle'];
-                    $body = $row['postBody'];
+                    $title = $dateArray[$i][1];
+                    $body = $dateArray[$i][2];
                     echo "<section><h1>$title</h1>";
                     echo "<p>$body</p></section>";
-                    echo $dateArray[$i];
-                }*/
+                }
             ?>
         </article>
         <footer>
