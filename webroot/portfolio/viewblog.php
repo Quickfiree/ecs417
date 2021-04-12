@@ -82,7 +82,7 @@
                     return strcmp($b_year.$b_month.$b_day.$b[1], $a_year.$a_month.$a_day.$a[1]);
                 }
 
-                usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
+                //usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
 
                 // Sorting by time after date
                 function timeSorting($c, $d) {
@@ -91,7 +91,13 @@
                     return strcmp($d_hour.$d_minute.$d_second.$d[1], $c_hour.$c_minute.$c_second.$c[1]);
                 }
 
-                usort($dateArray, 'timeSorting');
+                array_multisort(
+                    array_map('strtotime', array_column($dateArray, $dateArray[0][0])),
+                    array_column($dateArray, $dateArray[0][1]),
+                    $dateArray;
+                );
+
+                //usort($dateArray, 'timeSorting');
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
