@@ -68,13 +68,24 @@
                 $query = "SELECT * FROM BLOGPOSTS";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
+                
+                $array = array();
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
+                    $array[$i] = $row['postDate'];
+                }
+
+                ksort($array);
+
+                for ($i = 0; $i < $rows; $i++) {
+                    /*$row = $res->fetch_assoc();
                     $title = $row['postTitle'];
                     $body = $row['postBody'];
                     echo "<section><h1>$title</h1>";
-                    echo "<p>$body</p></section>";
+                    echo "<p>$body</p></section>";*/
+                    $current = $array[$i];
+                    echo "$current";
                 }
             ?>
         </article>
