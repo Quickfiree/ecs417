@@ -73,11 +73,18 @@
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
                     $dateArray[$i] = array($row['postDate'], $row['postTime'], $row['postTitle'], $row['postBody']);
-                    echo $dateArray[$i][0] . "<br>";
-                    echo $dateArray[$i][1] . "<br>";
-                    echo $dateArray[$i][2] . "<br>";
-                    echo $dateArray[$i][3] . "<br>";
                 }
+
+                // Sorting by date first
+                function dateSorting($a, $b) {
+                    echo list($a_month, $a_day, $a_year) = explode('/', $a[0]);
+                    echo list($b_month, $b_day, $b_year) = explode('/', $b[0]);
+                }
+
+                usort($dateArray, 'dateSorting');
+
+                // Sorting by time after sorted by date
+
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
