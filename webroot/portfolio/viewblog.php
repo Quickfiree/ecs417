@@ -85,7 +85,7 @@
                     echo "<section><h1>$title</h1>";
                     echo "<p>$body</p></section>";*/
                     $current = $array[$i];
-                    echo "$current";
+                    echo date('d-M-Y', strtotime($current));;
                 }
             ?>
         </article>
