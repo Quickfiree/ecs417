@@ -79,16 +79,16 @@
                 function dateSorting($a, $b) {
                     list($a_month, $a_day, $a_year) = explode('/', $a[0]);
                     list($b_month, $b_day, $b_year) = explode('/', $b[0]);
-                    return strcmp($b_year.$b_month.$b_day.$a[1], $a_year.$a_month.$a_day.$b[1]);
+                    return strcmp($b_year.$b_month.$b_day.$b[1], $a_year.$a_month.$a_day.$a[1]);
                 }
 
                 usort($dateArray, 'dateSorting'); // Returns 1 on success 0 on fail
 
                 // Sorting by time after date
                 function timeSorting($c, $d) {
-                    list($a_hour, $a_minute, $a_second) = explode(':', $a[1]);
-                    list($b_hour, $b_minute, $b_second) = explode(':', $b[1]);
-                    return strcmp($b_year.$b_month.$b_day.$a[1], $a_year.$a_month.$a_day.$b[1]);
+                    echo list($c_hour, $c_minute, $c_second) = explode(':', $c[1]);
+                    echo list($d_hour, $d_minute, $d_second) = explode(':', $c[1]);
+                    return strcmp($d_hour.$d_minute.$d_second.$d[1], $c_hour.$c_minute.$c_second.$c[1]);
                 }
 
                 usort($dateArray, 'timeSorting');
