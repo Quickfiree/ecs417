@@ -53,9 +53,6 @@
         <header>
             <hgroup> 
                 <h2>
-                <?php
-                echo date('Y-m-d H:i:s');
-                ?>    
                 Jatinkumar Patel
                 </h2>
                 <h3>
