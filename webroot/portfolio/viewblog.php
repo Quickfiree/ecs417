@@ -76,7 +76,7 @@
                     $array[$i] = $row['postDate'];
                 }
 
-                ksort($array);
+                krsort($array);
 
                 for ($i = 0; $i < $rows; $i++) {
                     /*$row = $res->fetch_assoc();
