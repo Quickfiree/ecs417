@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!isset ($_SESSION['user'])) {
+        header("location:http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html'")        
+    }
+?>
 <html>
     <head>
         <title> Add a blog post </title>
@@ -5,9 +11,6 @@
         <link rel = "stylesheet" href = "addpost.css">
     </head>
     <body>
-        <?php
-            session_start();
-        ?>
         <script>
             function showLogOut() {
                 document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/logout.php">Log Out</a>';
@@ -47,7 +50,7 @@
             }
         ?>
         <div class = "padding"></div>
-        <form method = "POST" id = "addPost" action = "viewblog.php">
+        <form method = "POST" id = "addPost" action = "uploadpost.php">
             <h2>
                 New Blog Post
             </h2>
@@ -55,13 +58,13 @@
                     <h3>
                         Title
                     </h3>
-                    <input type = "text" id = "title" class = "title" placeholder = "Enter title" required>
+                    <input type = "text" id = "title" name = "title" class = "title" placeholder = "Enter title" required>
                 </div>
                 <div>
                     <h3>
                         Body
                     </h3>
-                    <textarea class = "blogBody" id = "body" placeholder = "Enter text" required></textarea>
+                    <textarea class = "blogBody" id = "body" name = "body" placeholder = "Enter text" required></textarea>
                 </div>
                 <div class = "buttons">
                     <input type = "submit" class = "button" id = "submit" value = "Post" onclick = "check()">
@@ -96,8 +99,11 @@
                     <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
                     <script>
                         function clearPost() {
+                            // Clear post and highlighting
                             var r = confirm("Are you sure you want to clear your post?");
                             if (r == true) document.getElementById("addPost").reset();
+                            document.getElementById("title").style.border = null;
+                            document.getElementById("body").style.border = null;
                         }
                     </script>
                 </div>

@@ -6,7 +6,6 @@
         VALUES ('$fname', '$sname', '$email', '$password')";
         if ($conn -> query($sql) === TRUE) {
             $_SESSION['user'] = '$fname';
-        //Your code
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

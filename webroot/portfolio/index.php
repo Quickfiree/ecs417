@@ -53,7 +53,10 @@
         <header>
             <hgroup> 
                 <h2>
-                    Jatinkumar Patel
+                <?php
+                echo date('Y-m-d H:i:s');
+                ?>    
+                Jatinkumar Patel
                 </h2>
                 <h3>
                     BSc Computer Science - Queen Mary University of London
