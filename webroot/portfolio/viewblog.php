@@ -71,6 +71,8 @@
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
+                    $title = $row['postTitle'];
+                    $body = $row['postBody'];
                     echo "<h1>$row['postTitle']</h1>";
                     echo "<p>$row['postBody']</p>";
                 }
