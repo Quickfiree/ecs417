@@ -74,7 +74,7 @@
                     $row = $res->fetch_assoc();
                     $date = strtotime($row['postDate']);
                     $dateArray[$i] = array($date, $row['postTitle'], $row['postBody']);
-                    echo $dateArray[$i];
+                    echo $dateArray[$i][1];
                 }
 
                 function dateSorting($a, $b) {
