@@ -74,6 +74,7 @@
                     $row = $res->fetch_assoc();
                     $date = strtotime($row['postDate']);
                     $dateArray[$i] = array($date, $row['postTitle'], $row['postBody']);
+                    echo $dateArray[$i];
                 }
 
                 function dateSorting($a, $b) {
@@ -83,14 +84,14 @@
                 usort($dateArray, 'dateSorting');
 
 
-                for ($i = 0; $i < $rows; $i++) {
+                /*for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
                     $title = $row['postTitle'];
                     $body = $row['postBody'];
                     echo "<section><h1>$title</h1>";
                     echo "<p>$body</p></section>";
                     echo $dateArray[$i];
-                }
+                }*/
             ?>
         </article>
         <footer>
