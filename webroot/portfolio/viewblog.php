@@ -73,8 +73,8 @@
                     $row = $res->fetch_assoc();
                     $title = $row['postTitle'];
                     $body = $row['postBody'];
-                    echo "<h1>$row['postTitle']</h1>";
-                    echo "<p>$row['postBody']</p>";
+                    echo "<h1>$title</h1>";
+                    echo "<p>$body</p>";
                 }
             ?>
         </article>
