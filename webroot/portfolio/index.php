@@ -39,7 +39,6 @@
         </ul>
     </nav>
     <?php
-
     if (isset ($_SESSION['user'])) {
     // Do if user is logged in
         echo '<script type = "text/javascript">showLogOut();</script>';
@@ -54,6 +53,9 @@
         <header>
             <hgroup> 
                 <h2>
+                    <?php
+                        echo $_SESSION['user'];
+                    ?>
                     Jatinkumar Patel
                 </h2>
                 <h3>

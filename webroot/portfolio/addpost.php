@@ -5,9 +5,18 @@
         <link rel = "stylesheet" href = "addpost.css">
     </head>
     <body>
-    <?php
-        session_start();
-    ?>
+        <?php
+            session_start();
+        ?>
+        <script>
+            function showLogOut() {
+                document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/logout.php">Log Out</a>';
+            }
+
+            function showLogIn() {
+                document.getElementById("loginButton").innerHTML = '<a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/login.html">Log In</a>';
+            }
+        </script>
         <nav>
             <ul class = "horizontal">
                 <li>
@@ -17,7 +26,7 @@
                     <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.html">Projects</a>
                 </li>
                 <li>
-                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.html" class = "active">Add a blog post</a>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php" class = "active">Add a blog post</a>
                 </li>
                 <li>
                     <a href = "https://www.linkedin.com/in/jatinkumar-patel-5139a8201/">Contact - LinkedIn</a>
@@ -27,8 +36,18 @@
                 </li>
             </ul>
         </nav>
+        <?php
+            if (isset ($_SESSION['user'])) {
+            // Do if user is logged in
+                echo '<script type = "text/javascript">showLogOut();</script>';
+                
+            } else {
+                // Nobody is logged in
+                echo '<script type = "text/javascript">showLogIn();</script>';
+            }
+        ?>
         <div class = "padding"></div>
-        <form method = "POST" id = "addPost">
+        <form method = "POST" id = "addPost" action = "viewblog.php">
             <h2>
                 New Blog Post
             </h2>
