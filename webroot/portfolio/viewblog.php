@@ -72,22 +72,24 @@
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $date = strtotime($row['postDate']);
-                    $dateArray[$i] = array($date, $row['postTitle'], $row['postBody']);
-                    //echo $dateArray[$i][1];
+                    $dateArray[$i] = array($row['postDate'], $row['postTime'], $row['postTitle'], $row['postBody']);
                 }
 
+                // Sorting by date first
                 function dateSorting($a, $b) {
+                    echo strtotime($b[0][0]) - strtotime ($a[0][0]);
                     return strtotime($b[0][0]) - strtotime ($a[0][0]);
                 }
 
                 usort($dateArray, 'dateSorting');
 
+                // Sorting by time after sorted by date
+
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $title = $dateArray[$i][1];
-                    $body = $dateArray[$i][2];
+                    $title = $dateArray[$i][2];
+                    $body = $dateArray[$i][3];
                     echo "<section><h1>$title</h1>";
                     echo "<p>$body</p></section>";
                 }
