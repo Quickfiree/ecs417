@@ -16,6 +16,8 @@
     }
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $title = $_POST["title"];
+        $body = $_POST["body"];
         $date = date('Y-m-d H:i:s');
         $sql = "INSERT INTO BLOGPOSTS (postTitle, postBody, postDate)
         VALUES ('$title', '$body', '$date')";
