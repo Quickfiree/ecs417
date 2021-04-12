@@ -64,14 +64,15 @@
                 if ($conn -> connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                
+
                 $query = "SELECT * FROM BLOGPOSTS";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
 
                 for ($i = 0; $i < $rows; $i++) {
-                    $title = $res
-                    # code...
+                    $row = $res->fetch_assoc();
+                    echo "<h1>$row['postTitle']</h1>";
+                    echo "<p>$row['postBody']</p>";
                 }
             ?>
         </article>
