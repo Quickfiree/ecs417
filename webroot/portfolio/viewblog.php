@@ -64,28 +64,32 @@
                 if ($conn -> connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-
+                // First get dates and sort them
                 $query = "SELECT * FROM BLOGPOSTS";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
-                
-                $array = array();
+                $dateArray = array();
 
                 for ($i = 0; $i < $rows; $i++) {
                     $row = $res->fetch_assoc();
-                    $array[$i] = $row['postDate'];
+                    $date = strtotime($row['postDate']);
+                    $dateArray[$i] = array($date, $row['postTitle'], $row['postBody']);
                 }
 
-                krsort($array);
+                function dateSorting($a, $b) {
+                    return strtotime($b[0]) - strtotime ($a[0]);
+                }
+
+                usort($dateArray, 'dateSorting');
+
 
                 for ($i = 0; $i < $rows; $i++) {
-                    /*$row = $res->fetch_assoc();
+                    $row = $res->fetch_assoc();
                     $title = $row['postTitle'];
                     $body = $row['postBody'];
                     echo "<section><h1>$title</h1>";
-                    echo "<p>$body</p></section>";*/
-                    $current = $array[$i];
-                    echo date('d-M-Y', strtotime($current));;
+                    echo "<p>$body</p></section>";
+                    echo $dateArray[$i];
                 }
             ?>
         </article>
