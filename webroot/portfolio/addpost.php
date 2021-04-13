@@ -50,7 +50,7 @@
             }
         ?>
         <div class = "padding"></div>
-        <form method = "POST" id = "addPost" action = "uploadpost.php">
+        <form method = "POST" id = "addPost" action = "uploadpost.php" name = "addpost">
             <h2>
                 New Blog Post
             </h2>
@@ -102,8 +102,8 @@
                             document.getElementById("preview").style.display = "block";
                             var title = document.getElementById("title").value;
                             var body = document.getElementById("body").value;
-                            var titlePreview = document.getElementById("previewTitle").value;
-                            var bodyPreview = document.getElementById("previewBody").value;
+                            var titlePreview = document.getElementById("previewTitle").innerHTML.value;
+                            var bodyPreview = document.getElementById("previewBody").innerHTML.value;
                             titlePreview.value = title;
                             bodyPreview.value = body;
                         }
