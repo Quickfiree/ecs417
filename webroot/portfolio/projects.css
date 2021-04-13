@@ -55,11 +55,6 @@ article {
     float: left;
 }
 
-figure {
-    float: right;
-    margin-right: 25em;
-}
-
 figure img {
     border: thin solid;
     border-radius: 1em;
