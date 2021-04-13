@@ -74,7 +74,8 @@
             
             if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $new_date = date('Y-m-d', strtotime($_POST['date']));
-                echo $new_date;
+                $dateObj = DateTime::createFromFormat('jS F Y', $new_date) -> format('n');
+                echo $dateObj;
                 $query = "SELECT * FROM BLOGPOSTS WHERE cast(postDate as date) = '$new_date'";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
