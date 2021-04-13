@@ -70,12 +70,32 @@
                     the game. I introduced many stats for both players and enemies, including health, a damage range for each weapon type,
                     and a chance for a player or enemy to dodge an attack.
                 </p>
+                <figure>
+                    <img src = "game_ss.png" alt = "Can't see this image. :(">
+                    <figcaption><i>Text based for now, GUI in progress.</i></figcaption>
+                </figure>
+            </section>
+            <section id = "minecraftBot">
+                <h2>
+                    Programming Project - Procedural Minecraft Helper Bot
+                </h2>
+                <p>
+                    As part of my Procedural Programming module in Semester A of 1st Year, I had to create a minecraft help bot which acted as a guide for a user. 
+                </p>
+                <p>
+                    This Java project was completed in small steps, starting from just getting a basic user input to trigger an output on the screen. I then worked 
+                    my way up into programming a bot that could recognise a trigger word in the user's input, and send an output to the user based on that trigger.
+                    The final stage was to be able to save answers to a file and then have an option to load them in when you first open the program. Undertaking this
+                    project taught me many things about Java, especially when it came to file writing and handling exceptions to do with it. My overall programming style
+                    became more efficient as I progressed, and I could make small edits to my code to make things easier both to understand when reading the code,
+                    and to make the program execution more robust.
+                </p>
+                <figure>
+                    <img src = "Screenshot_63.png" alt = "Can't see this image. :(">
+                    <figcaption><i>An example of the file input/output methods being used in the bot</i></figcaption>
+                </figure>
             </section>
         </article>
-        <figure>
-            <img src = "game_ss.png" alt = "Can't see this image. :(">
-            <figcaption><i>Text based for now, GUI in progress.</i></figcaption>
-        </figure>
         <footer>
             <p>
                 <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/index.php">Home</a>

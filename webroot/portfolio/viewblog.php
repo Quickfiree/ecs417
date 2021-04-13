@@ -76,7 +76,6 @@
                 $new_date = date('Y-m-d', strtotime($_POST['date']));
                 $timestamp = strtotime($new_date);
                 $month = date("n", $timestamp);
-                echo $month;
                 $query = "SELECT * FROM BLOGPOSTS WHERE MONTH(postDate) = $month";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
@@ -129,33 +128,6 @@
                     echo "<p>$body</p></section>";
                 }
             }
-            /*
-            // First get dates and sort them
-            $query = "SELECT * FROM BLOGPOSTS";
-            $res = mysqli_query($conn, $query);
-            $rows = mysqli_num_rows($res);
-            $dateArray = array();
-
-            for ($i = 0; $i < $rows; $i++) {
-                $row = $res->fetch_assoc();
-                $dateArray[$i] = array("date" => $row['postDate'], "time" => $row['postTime'], $row['postTitle'], $row['postBody']);
-            }
-
-            array_multisort( // Sorts according to oldest first
-                array_map('strtotime', array_column($dateArray, 'date')),
-                array_column($dateArray, 'time'),
-                $dateArray
-            );
-
-            $dateArray = array_reverse($dateArray); // Reverses the array to make the order newest first.
-
-            for ($i = 0; $i < $rows; $i++) {
-                $title = $dateArray[$i][0];
-                $body = $dateArray[$i][1];
-                echo "<section><h1>$title</h1>";
-                echo "<p>$body</p></section>";
-            }
-            */
         ?>
         </article>
         <footer>
