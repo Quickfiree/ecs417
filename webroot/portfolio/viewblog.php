@@ -75,8 +75,9 @@
             if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $new_date = date('Y-m-d', strtotime($_POST['date']));
                 $timestamp = strtotime($new_date);
+                $year = date("Y", $timestamp);
                 $month = date("n", $timestamp);
-                $query = "SELECT * FROM BLOGPOSTS WHERE MONTH(postDate) = $month";
+                $query = "SELECT * FROM BLOGPOSTS WHERE MONTH(postDate) = $month AND YEAR(postDate) = $year";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
                 $dateArray = array();
