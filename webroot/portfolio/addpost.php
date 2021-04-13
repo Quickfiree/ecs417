@@ -29,6 +29,9 @@
                     <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/projects.php">Projects</a>
                 </li>
                 <li>
+                    <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/viewblog.php">View blog</a>
+                </li>
+                <li>
                     <a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/addpost.php" class = "active">Add a blog post</a>
                 </li>
                 <li>
@@ -117,7 +120,7 @@
                     </script>
                 </div>
         </form>
-        <aside id = "preview">
+        <section id = "preview">
             <h1 id = "previewTitle"></h1>
             <p id = "previewBody"></p>
         </aside>
