@@ -49,6 +49,7 @@ section, header {
 
 section {
     width: 50em;
+    border: solid;
 }
 
 article {
