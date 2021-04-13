@@ -44,16 +44,36 @@ ul.horizontal a.active {
     color: #011638;
 }
 
-section, header {
+header {
     padding: 1em;
-}
-
-section {
-    width: 50em;
+    background-color: #6B6D76;
+    color: white;
 }
 
 article {
     float: left;
+    width: 65%;
+    display: block;
+    margin-bottom: 5em;
+}
+
+section {
+    padding-left: 1em;
+    padding-bottom: 1em;
+    background-color: #C5D5F2;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul.modules {
+    margin: 0;
+}
+
+section h2 {
+    padding-top: 1em;
+    margin: 0;
 }
 
 figure img {

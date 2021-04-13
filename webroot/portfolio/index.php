@@ -156,7 +156,7 @@
         </article>
         <aside>
             <div class = "blog">
-                <h1> Blog placeholder </h1>
+                <h3><a href = "http://cakephp-mysql-persistent-ecs417-jatin.apps.okd.eecs.qmul.ac.uk/portfolio/viewblog.php">View blog here</a></h3>
             </div>
         </aside>
         <footer>
