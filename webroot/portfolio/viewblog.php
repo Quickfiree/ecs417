@@ -78,6 +78,7 @@
                 $query = "SELECT * FROM BLOGPOSTS WHERE postDate = $new_date";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
+                echo $rows;
                 $dateArray = array();
 
                 for ($i = 0; $i < $rows; $i++) {
