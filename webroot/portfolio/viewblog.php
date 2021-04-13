@@ -72,7 +72,11 @@
                     die("Connection failed: " . $conn->connect_error);
                 }
                 
-                function sortAndShow($results, $resRows, $dateArrayArr) {
+                function sortAndShow($query) {
+                    $res = mysqli_query($conn, $query);
+                    $rows = mysqli_num_rows($res);
+                    $dateArray = array();
+
                     for ($i = 0; $i < $rows; $i++) {
                         $row = $res->fetch_assoc();
                         $dateArray[$i] = array("date" => $row['postDate'], "time" => $row['postTime'], $row['postTitle'], $row['postBody']);
@@ -97,21 +101,21 @@
                 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $new_date = date('Y-m-d', strtotime($_POST['date']));
                     echo $new_date;
-                    $query = "SELECT * FROM BLOGPOSTS WHERE postDate = $date";
+                    $sql = "SELECT * FROM BLOGPOSTS WHERE postDate = $date";
                     $res = mysqli_query($conn, $query);
                     $rows = mysqli_num_rows($res);
                     $dateArray = array();
 
-                    sortAndShow($res, $rows, $dateArray);
+                    sortAndShow($sql);
                     
                 } else {
                     // First get dates and sort them
-                    $query = "SELECT * FROM BLOGPOSTS";
-                    $res = mysqli_query($conn, $query);
-                    $rows = mysqli_num_rows($res);
-                    $dateArray = array();
+                    $sql = "SELECT * FROM BLOGPOSTS";
+                    //$res = mysqli_query($conn, $query);
+                    //$rows = mysqli_num_rows($res);
+                    //$dateArray = array();
 
-                    sortAndShow($res, $rows, $dateArray);
+                    sortAndShow($sql);
                 }
 
                 /*
