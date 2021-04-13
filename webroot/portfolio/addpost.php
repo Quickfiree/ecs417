@@ -96,7 +96,7 @@
                             }
                         }
                     </script>
-                    <input type = "submit" class = "button" onclick = "previewPost()" value = "Preview post">
+                    <input type = "button" class = "button" onclick = "previewPost(); return false" value = "Preview post">
                     <script>
                         function previewPost() {
                             document.getElementById("preview").style.display = "block";
