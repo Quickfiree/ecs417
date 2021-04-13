@@ -100,8 +100,12 @@
                     <script>
                         function previewPost() {
                             document.getElementById("preview").style.display = "block";
-                            document.getElementById("previewTitle").value = document.getElementById("title").value;
-                            document.getElementById("previewBody").value = document.getElementById("body").value;
+                            var title = document.getElementById("title").value;
+                            var body = document.getElementById("body").value;
+                            var titlePreview = document.getElementById("previewTitle").value;
+                            var bodyPreview = document.getElementById("previewBody").value;
+                            titlePreview.value = title;
+                            bodyPreview.value = body;
                         }
                     </script>
                     <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
@@ -112,6 +116,7 @@
                             if (r == true) document.getElementById("addPost").reset();
                             document.getElementById("title").style.border = null;
                             document.getElementById("body").style.border = null;
+                            document.getElementById("preview").style.display = "none";
                         }
                     </script>
                 </div>
