@@ -96,16 +96,12 @@
                             }
                         }
                     </script>
-                    <input type = "button" class = "button" onclick = "previewPost()" value = "Preview post">
+                    <input type = "submit" class = "button" onclick = "previewPost()" value = "Preview post">
                     <script>
                         function previewPost() {
                             document.getElementById("preview").style.display = "block";
-                            var title = document.getElementById("title").value;
-                            var body = document.getElementById("body").value;
-                            var titlePreview = document.getElementById("previewTitle").innerHTML.value;
-                            var bodyPreview = document.getElementById("previewBody").innerHTML.value;
-                            titlePreview.value = title;
-                            bodyPreview.value = body;
+                            document.getElementById("previewTitle").innerHTML = document.addpost.title.value;
+                            document.getElementById("previewBody").innerHTML = document.addpost.body.value;
                         }
                     </script>
                     <input type = "button" class = "button" onclick = "clearPost()" value = "Reset">
