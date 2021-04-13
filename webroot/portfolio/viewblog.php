@@ -77,7 +77,7 @@
                 $timestamp = strtotime($new_date);
                 $month = date("n", $timestamp);
                 echo $month;
-                $query = "SELECT * FROM BLOGPOSTS WHERE cast(postDate as date) = '$new_date'";
+                $query = "SELECT * FROM BLOGPOSTS WHERE MONTH(postDate) = $month";
                 $res = mysqli_query($conn, $query);
                 $rows = mysqli_num_rows($res);
                 $dateArray = array();
