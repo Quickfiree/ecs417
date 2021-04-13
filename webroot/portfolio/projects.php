@@ -70,11 +70,11 @@
                     the game. I introduced many stats for both players and enemies, including health, a damage range for each weapon type,
                     and a chance for a player or enemy to dodge an attack.
                 </p>
-                <figure>
-                    <img src = "game_ss.png" alt = "Can't see this image. :(">
-                    <figcaption><i>Text based for now, GUI in progress.</i></figcaption>
-                </figure>
             </section>
+            <figure>
+                <img src = "game_ss.png" alt = "Can't see this image. :(">
+                <figcaption><i>Text based for now, GUI in progress.</i></figcaption>
+            </figure>
             <section id = "minecraftBot">
                 <h2>
                     Programming Project - Procedural Minecraft Helper Bot
@@ -90,11 +90,11 @@
                     became more efficient as I progressed, and I could make small edits to my code to make things easier both to understand when reading the code,
                     and to make the program execution more robust.
                 </p>
-                <figure>
-                    <img src = "Screenshot_63.png" alt = "Can't see this image. :(">
-                    <figcaption><i>An example of the file input/output methods being used in the bot</i></figcaption>
-                </figure>
             </section>
+            <figure>
+                <img src = "Screenshot_63.png" alt = "Can't see this image. :(">
+                <figcaption><i>An example of the file input/output methods being used in the bot</i></figcaption>
+            </figure>
         </article>
         <footer>
             <p>
